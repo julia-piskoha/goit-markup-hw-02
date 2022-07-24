@@ -10,7 +10,10 @@
 футер адрес color: rgba(255, 255, 255, 0.6);*/
 body {
   font-family: "Roboto", sans-serif;
-  color: #757575;
+  color: var(--main-grey-color);
+  background-color: var(--main-white-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 .list {
   list-style: none;
@@ -33,8 +36,12 @@ body {
 :root {
   --main-grey-color: #757575;
   --accent-color: #2196f3;
+  --secondary-accent-color: #188ce8;
   --title-text-color: #212121;
   --main-white-color: #ffffff;
+  --secondary-grey-color: #f5f4fa;
+  --dark-grey-color: #2f303a;
+  --total-black-color: #000000;
 }
 
 /* -------------HEADER------------------ */
@@ -47,8 +54,7 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--total-black-color);
 }
 .logo-title {
   color: var(--accent-color);
@@ -64,7 +70,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
-.header-link-current {
+.current {
   color: var(--accent-color);
 }
 .header-link:hover,
@@ -75,14 +81,20 @@ body {
 .footer-tel:focus,
 .header-tel:hover,
 .header-tel:focus,
+.header-post:hover,
+.header-post:focus,
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
 }
-
+.header-post {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--main-grey-color);
+}
 .header-tel {
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-grey-color);
@@ -91,7 +103,7 @@ body {
 /* -------------MAIN------------------ */
 /* -------------Hero Benefits------------------ */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--dark-grey-color);
 }
 .hero-title {
   font-weight: 900;
@@ -106,70 +118,73 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em
   color: var(--main-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
 }
 
 .benefits-list {
-  background: #e5e5e5;
+  background-color: var(--main-white-color);
 }
 .benefits {
 }
 
 .benefits-item {
 }
+.benefits-paragraph {
+line-height: 1.71;
+}
 .benefits-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
 }
 
 /* -------------Work People------------------ */
 .work {
-  background: #e5e5e5;
+  background-color: var(--main-white-color);
 }
 .work-title,
 .people-title {
   font-size: 36px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
-  color: var(--title-text-color);
+    color: var(--title-text-color);
 }
 .work-list {
 }
 .work-item {
 }
 .people {
-  background: #f5f4fa;
+  background-color: var(--secondary-grey-color);
 }
 
 .people-list {
 }
 .people-item {
 }
+.people-position {
+font-size: 16px;
+line-height: 1.19;
+}
 .people-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
 
 /* -------------FOOTER------------------ */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--dark-grey-color);
 }
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--main-white-color);
+   color: var(--main-white-color);
 }
 .address-list {
 }
@@ -179,7 +194,6 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--main-white-color);
 }
 .footer-tel,
@@ -187,17 +201,16 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 .main-btn:hover,
 .main-btn:focus {
-  background-color: #188ce8;
+  background-color: var(--secondary-accent-color);
 }
 
 /* -------------PORTFOLIO------------------ */
 .portfolio {
-  background-color: #e5e5e5;
+  background-color: var(--main-white-color);
 }
 .filter {
 }
@@ -211,8 +224,11 @@ body {
   letter-spacing: 0.03em;
   cursor: pointer;
   color: var(--title-text-color);
+  background-color: var(--secondary-grey-color);
 }
-.filter-btn:active {
+.filter-btn:active,
+.filter-btn:hover,
+.filter-btn:focus {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 }
@@ -229,6 +245,5 @@ body {
 .cards-name {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
   color: var(--main-grey-color);
 }
